@@ -105,3 +105,18 @@ function borrar() {
   x.removeAttr("border");
 } */
 //_____________________________
+
+//EJERCICIO 6:
+
+let x = $(document);
+x.ready(initialize);
+
+function initialize() {
+  let x = $("#button1")
+  x.click(showHtml)
+}
+
+function showHtml() {
+  let x = $("#newForm");
+  x.html('<form><input type="text"><input type="submit"></form>')
+}
