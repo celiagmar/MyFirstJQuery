@@ -73,6 +73,7 @@ function read() {
 function write() {
   let x=$("p");
   x.text("Esto es un texto nuevo")
+  //Si en lugar de .text, usamos .append, el texto se añadirá al que ya había, en lugar de sustituirlo.
 } */
 //__________________________________
 
@@ -108,7 +109,7 @@ function borrar() {
 
 //EJERCICIO 6:
 
-let x = $(document);
+/* let x = $(document);
 x.ready(initialize);
 
 function initialize() {
@@ -119,4 +120,45 @@ function initialize() {
 function showHtml() {
   let x = $("#newForm");
   x.html('<form><input type="text"><input type="submit"></form>')
+} */
+//_______________________________________________________________________
+
+//EJERCICIO 7:
+
+/* let x = $(document);
+x.ready(initialize);
+
+function initialize() {
+  let x = $(document)
+  x.mousemove(moverRaton);
 }
+
+function moverRaton() {
+  let x = $("#x")
+  x.text("Coordenada X = "+event.clientX);
+  x = $("#y")
+  x.text("Coordenada Y = "+event.clientY);
+} */
+//______________________________
+
+//EJERCICIO 8:
+
+let x = $(document);
+x.ready(initialize);
+
+function initialize() {
+  let x = $("#user")
+  x.focus(enfocar)
+  x.blur(desenfocar)
+}
+
+function enfocar() {
+  let x = $("#user")
+  x.attr("value", "")
+}
+
+function desenfocar() {
+  let x = $("#user")
+  x.attr("value", "Introduce Usuario")
+}
+//______________________________
