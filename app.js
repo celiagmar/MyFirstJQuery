@@ -143,7 +143,7 @@ function moverRaton() {
 
 //EJERCICIO 8:
 
-let x = $(document);
+/* let x = $(document);
 x.ready(initialize);
 
 function initialize() {
@@ -161,4 +161,49 @@ function desenfocar() {
   let x = $("#user")
   x.attr("value", "Introduce Usuario")
 }
+ */
 //______________________________
+
+//EJERCICIO 9:
+
+/* let x = $(document);
+x.ready(initialize);
+
+function initialize() {
+  let x = $("#showme")
+  x.click(toShow)
+  x = $("#hideme")
+  x.click(toHide)
+}
+
+function toShow() {
+  let x = $("#objective")
+  x.show("slow")
+  //x.fadeIn() -> Hace lo mismo pero sin degradado
+}
+
+function toHide() {
+  let x = $("#objective")
+  x.hide("fast") */
+  //x.fadeOut() -> Lo mismo pero sin degradado (Ambos también soportan fast y slow)
+/* } */
+//El efecto .toggle() realiza esta misma acción de mostrar y ocultar. Acortaría el código porque en este caso sólo haría falta un botón y por lo tanto una función. También soporta slow y fast.
+//______________________________________________________________________________________________________________________________________________________________________________________________
+
+//EJERCICIO 10:
+
+let x = $(document)
+x.ready(initialize);
+
+function initialize() {
+  let x = $("#animateme")
+  x.click(anime)
+}
+
+function anime() {
+  let x = $("#animation")
+  x.animate({height:300}, "slow");
+  x.animate({width:300}, "fast");
+  x.animate({height:100}, "normal");
+  x.animate({width:100}, 1000);
+}
